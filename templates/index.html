@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Calendar Agent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-md text-center">
+        <h1 class="text-3xl font-bold mb-4 text-white">AI Calendar Agent</h1>
+        <p class="text-gray-400 mb-6">Upload a document to automatically add events to your Google Calendar.</p>
+
+        <form action="/" method="post" enctype="multipart/form-data" class="space-y-4">
+            <div>
+                <label for="file" class="sr-only">Upload Document</label>
+                <input type="file" name="file" id="file" required class="w-full text-sm text-gray-400
+                  file:mr-4 file:py-2 file:px-4
+                  file:rounded-full file:border-0
+                  file:text-sm file:font-semibold
+                  file:bg-violet-50 file:text-violet-700
+                  hover:file:bg-violet-100"/>
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-full font-semibold hover:bg-indigo-700 transition-colors">
+                Add to Calendar
+            </button>
+        </form>
+
+        <div id="status-message" class="mt-4 text-sm text-gray-400 hidden"></div>
+    </div>
+</body>
+</html>
